@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}TaskFlow | Organize your day{% endblock %}
+{% block content %}
+<section class="auth-page container-fluid page-width">
+  <div class="auth-copy"><div class="eyebrow"><span></span> A calmer way to get things done</div><h1>Make room for<br><em>what matters.</em></h1><p>TaskFlow brings your plans, priorities, and progress into one clear workspace.</p><div class="mini-proof"><span class="proof-avatars"><i>J</i><i>M</i><i>A</i></span><span>Built for focused days</span></div></div>
+  <div class="auth-panel"><div class="panel-kicker">Welcome to TaskFlow</div><h2>Start your flow</h2><p class="muted-copy">Sign in to pick up where you left off.</p><form action="{{ url_for('login') }}" method="post" class="stack-form" data-validate><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><small class="field-error"></small></div><div class="field"><div class="d-flex justify-content-between"><label for="password">Password</label><a href="{{ url_for('register') }}" class="small-link">Create an account</a></div><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Your password" required minlength="6"><small class="field-error"></small></div><button class="btn btn-primary btn-lg w-100" type="submit">Log in <i class="bi bi-arrow-up-right ms-2"></i></button></form><div class="or-divider"><span>or</span></div><a href="{{ url_for('guest') }}" class="btn btn-quiet w-100"><i class="bi bi-stars me-2"></i>Continue as guest</a><p class="panel-foot">New here? <a href="{{ url_for('register') }}">Create your free account</a></p></div>
+</section>
+{% endblock %}
